@@ -1,0 +1,89 @@
+<!doctype>
+
+<title>></title>
+<head>
+<link rel='Stylesheet' href='/Users/lindritdemelezi/myproject/venv/Style.css'>
+<style>
+
+body {
+background-color:pink;
+}
+br{
+    text-align: center;
+    color:bisque;
+    size: 0.5em;
+    text-size-adjust: auto;
+    text-size:10;
+    font-size:10;
+}
+
+form {
+    text-align:left;
+    font-size:20px;
+}
+.input {
+    font-size: 15px;
+    
+    font-family: inherit;
+    
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 2px;
+    margin:15px;
+    display:inline-block;
+    width: auto;
+    align-text:center;
+    
+  }
+ input[type="text"] {
+             position: relative;
+             display: block;
+             margin : 5px auto;
+        }
+  text {
+      font-size:10;
+  }
+  fieldset
+  {
+      display-block:inline;
+      width:30%;
+  }
+
+</style>
+
+
+</head>
+<body bgcolor='pink'>
+<h1><center>Diabetics</center</h1>
+<form method="POST" action="{{ url_for('predict')}}">
+<fieldset>
+<legend>Diabetes Prediction:</legend>
+Pregnencies<input type='text' name='prg' class="input"
+</br>
+<br>
+Glucose<input type='text' name='gl' class="input"
+</br>
+<br>
+Blood pressure<input type='text' name='bp' class="input"
+</br>
+<br>
+Skin Thickness<input type='text' name='sk' class="input"
+</br><br>
+
+Isnulin<input type='text' name='ins'  class="input"
+</br><br>
+BMI<input type='text' name='BMI'    class="input"
+</br><br>
+Pedigree Function<input type='text' name='ped' class="input"
+</br><br>
+Age<input type='text' name='age'     class="input"
+</br><br>
+<br></br>
+<button type="Submit" class="btn">Predict</button>
+</br>
+</fieldset>
+</form>
+<br>
+{{ prediction_text}}
+</br>
+</body>
